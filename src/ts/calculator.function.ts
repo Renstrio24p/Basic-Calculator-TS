@@ -5,7 +5,6 @@ export const Calculator_Function = () => {
         ButtonClick[i].addEventListener('click', CalculateClick);
     }
     const DisplayOutput = document.getElementById('display') as HTMLInputElement;
-    DisplayOutput.value = '0';
     function CalculateClick(event: Event) {
         const clickedButton = event.target as HTMLInputElement;
 
@@ -27,7 +26,7 @@ export const Calculator_Function = () => {
             case '1':
                 DisplayOutput.value === '0' ? DisplayOutput.value = clickedButton.value : DisplayOutput.value += clickedButton.value;
                 break;
-            case 'DE':
+            case 'DEL':
                 if (DisplayOutput.value.length === 1) {
                     DisplayOutput.value = '0';
                 } else {
